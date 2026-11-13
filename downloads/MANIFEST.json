@@ -12,23 +12,23 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 2691,
-      "sha256": "23239af178b5340e100bfe3624373f190f855817bc0ebfaf9a74491778fe4c73"
+      "bytes": 2651,
+      "sha256": "8ecd38cd1236287bcaa6693190f84acdb86039d9f75f8506960fef936f5f076f"
     },
     {
       "path": "START-HERE.html",
-      "bytes": 5438,
-      "sha256": "239a4d723e0d6ac84a0c1432cf685c954a8f0b58ad17e98a10ef26eb1c635233"
+      "bytes": 5508,
+      "sha256": "1985eaf73b0e5bf53b166951bb61cdbdaeaf6c6ebeee1330b57ee4194db802cd"
     },
     {
       "path": "AGENT-INSTRUCTIONS.md",
-      "bytes": 7991,
-      "sha256": "2ba31aa7499510b0b4f23fef761ef1551fbc4efd6edb97224611d9ed0a90ff70"
+      "bytes": 8180,
+      "sha256": "1b34cbcca298245b861c1290808b5e9fc7f134e51cf7b8f5519265d94199f1a4"
     },
     {
       "path": "MASTER-PROMPT.md",
-      "bytes": 4135,
-      "sha256": "d90657a06af0f5ec0cc355b6120bb573658270847903e49bb788e23b07997aeb"
+      "bytes": 4309,
+      "sha256": "8dc5d003275911ac831d5887c7011b0dc0126b154887fae35b6c0ca636f4def8"
     },
     {
       "path": "BUSINESS-QUESTIONNAIRE.md",
