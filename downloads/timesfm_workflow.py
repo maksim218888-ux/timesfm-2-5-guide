@@ -36,12 +36,12 @@ MODEL_REVISION = "1d952420fba87f3c6dee4f240de0f1a0fbc790e3"
 
 
 def parse_args() -> argparse.Namespace:
-    here = Path(__file__).resolve().parent.parent
+    here = Path(__file__).resolve().parent
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--data",
         type=Path,
-        default=here / "raw" / "official" / "noaa_co2_mm_mlo_2026-11-12.csv",
+        default=here / "noaa_co2_snapshot.csv",
     )
     parser.add_argument("--output", type=Path, default=here / "output")
     parser.add_argument("--folds", type=int, default=5)

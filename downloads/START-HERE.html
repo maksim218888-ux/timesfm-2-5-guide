@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TimesFM 2.5 starter pack · AI First Club</title>
+<style>
+@font-face{font-family:Geist;src:url('../assets/fonts/geist-cyrillic.woff2') format('woff2');font-display:swap}@font-face{font-family:Unbounded;src:url('../assets/fonts/unbounded-cyrillic.woff2') format('woff2');font-display:swap}:root{--bg:#fafaf9;--ink:#15151a;--green:#4d7c0f;--lime:#a3e635;--soft:#ecfccb;--orange:#ff6900;--line:#d7d7d7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 Geist,system-ui,sans-serif}.wrap{max-width:980px;margin:auto;padding:42px 20px 70px}.brand{font:700 13px Unbounded,sans-serif;color:var(--green);margin-bottom:44px}.brand:before{content:'✦';display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--soft);margin-right:10px}h1,h2{font-family:Unbounded,Geist,sans-serif;letter-spacing:-.04em;line-height:1.08}h1{font-size:clamp(40px,7vw,72px);max-width:820px;margin:0 0 22px}h2{font-size:28px;margin-top:52px}.lead{font-size:22px;max-width:760px}.note{background:var(--soft);border:1px solid #bef264;padding:22px;margin:30px 0}.steps{counter-reset:s;display:grid;gap:12px}.step{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:15px;padding:20px;border:1px solid var(--line);background:white}.step:before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);font-weight:800}.files{display:grid;grid-template-columns:1fr 1fr;gap:12px}.file{padding:17px;border-top:6px solid var(--lime);background:white}.file b{display:block}.file small{color:#57575f}code{font-family:ui-monospace,monospace;background:#f1f5f9;padding:.12em .35em}a{color:var(--green);text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:.18em}.footer{margin-top:55px;padding:28px;background:#0a0a0a;color:white}.footer b{font-family:Unbounded;color:var(--lime)}@media(max-width:650px){.files{grid-template-columns:1fr}.wrap{padding:28px 15px}.step{grid-template-columns:40px 1fr;padding:16px}h1{font-size:39px}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="brand">AI FIRST CLUB / STARTER PACK</div>
+<h1>TimesFM 2.5: начните с проверяемого прогноза</h1>
+<p class="lead">Этот набор повторяет маршрут из гайда: фиксирует версию и лицензию, запускает point + q10/q50/q90, сравнивает результат с seasonal-naive и сохраняет rolling backtest.</p>
+<div class="note"><b>Граница:</b> код и веса TimesFM 2.5 доступны по Apache-2.0 согласно уведомлению официального репозитория. Перед коммерческим внедрением проверьте лицензию и security-требования. Не заменяйте checkpoint скачанными весами TimesFM-3: у них отдельный некоммерческий режим.</div>
+<h2>Порядок запуска</h2>
+<div class="steps">
+<div class="step"><div><b>Создайте окружение.</b><br><code>python -m venv .venv</code>, затем установите зависимости из <code>requirements-cpu.txt</code>.</div></div>
+<div class="step"><div><b>Проверьте готовый пример.</b><br>Из каталога распакованного набора запустите <code>python timesfm_workflow.py --data noaa_co2_snapshot.csv --folds 5</code>. Скрипт сохранит метрики и артефакты в <code>output/</code>.</div></div>
+<div class="step"><div><b>Подставьте свой ряд.</b><br>Скопируйте структуру <code>business_series.csv</code>, не меняя смысл timestamp, series_id и target.</div></div>
+<div class="step"><div><b>Сравните с простым правилом.</b><br>Не принимайте прогноз, пока он не прошёл holdout и rolling-проверки на тех же датах, что и baseline.</div></div>
+<div class="step"><div><b>Подключайте агента безопасно.</b><br>Используйте <code>forecast_contract.yaml</code> и <code>agent_tool_contract.json</code>. Forecast возвращает рекомендацию, но не выполняет действие.</div></div>
+</div>
+<h2>Что лежит в наборе</h2>
+<div class="files">
+<div class="file"><b>timesfm_workflow.py</b><small>проверенный workflow</small></div><div class="file"><b>requirements-cpu.txt</b><small>зафиксированные зависимости</small></div><div class="file"><b>environment-freeze.txt</b><small>проверенное окружение</small></div><div class="file"><b>noaa_co2_snapshot.csv</b><small>воспроизводимый пример</small></div><div class="file"><b>business_series.csv</b><small>шаблон вашего ряда</small></div><div class="file"><b>forecast_contract.yaml</b><small>контракт задачи</small></div><div class="file"><b>agent_tool_contract.json</b><small>безопасный tool contract</small></div><div class="file"><b>rolling_backtest.csv</b><small>60 проверенных точек</small></div>
+</div>
+<p><a href="../index.html">Вернуться к полному 22-раздельному гайду</a></p>
+<div class="footer"><b>AI First Club</b><br>Практика внедрения ИИ без подмены проверки красивым прогнозом.</div>
+</main></body></html>
