@@ -1,0 +1,154 @@
+{
+  "schema": "ai_first_club.timesfm_starter_pack.v2",
+  "product": "Ready agent-assisted forecasting kit",
+  "entrypoints": [
+    "START-HERE.html",
+    "MASTER-PROMPT.md",
+    "AGENT-INSTRUCTIONS.md"
+  ],
+  "tested_python": "3.10.12",
+  "test_log": "qa/starter-pack-business-clean-run.log",
+  "decision_support_only": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2691,
+      "sha256": "23239af178b5340e100bfe3624373f190f855817bc0ebfaf9a74491778fe4c73"
+    },
+    {
+      "path": "START-HERE.html",
+      "bytes": 5438,
+      "sha256": "239a4d723e0d6ac84a0c1432cf685c954a8f0b58ad17e98a10ef26eb1c635233"
+    },
+    {
+      "path": "AGENT-INSTRUCTIONS.md",
+      "bytes": 7991,
+      "sha256": "2ba31aa7499510b0b4f23fef761ef1551fbc4efd6edb97224611d9ed0a90ff70"
+    },
+    {
+      "path": "MASTER-PROMPT.md",
+      "bytes": 4135,
+      "sha256": "d90657a06af0f5ec0cc355b6120bb573658270847903e49bb788e23b07997aeb"
+    },
+    {
+      "path": "BUSINESS-QUESTIONNAIRE.md",
+      "bytes": 891,
+      "sha256": "ccc2a1d1570fb124fccfd88fcc0dfb64c857a131f81f7f619f612dd3ba3b2999"
+    },
+    {
+      "path": "QA-CHECKLIST.md",
+      "bytes": 1411,
+      "sha256": "577d3001d01f67cfffc34d412e42bffafc7e704fd9e99d944da5fccaf1465a16"
+    },
+    {
+      "path": "TROUBLESHOOTING.md",
+      "bytes": 2276,
+      "sha256": "dcd3728b9c6f39f5450e8399ca39434f4108db48feba5deae95296641124c07a"
+    },
+    {
+      "path": "EXPECTED-OUTPUTS.md",
+      "bytes": 1117,
+      "sha256": "bdedcb70130fcb93d26037cda567831e6577c634066a9f97bc87cf36fc193580"
+    },
+    {
+      "path": "timesfm_workflow.py",
+      "bytes": 15419,
+      "sha256": "d458cfd22bcabebdc0036a97bec54acb6ad48c26bda12e550de238fb553b70ab"
+    },
+    {
+      "path": "requirements-cpu.txt",
+      "bytes": 315,
+      "sha256": "96f66ca4117308ea3485effbafa9dc84faef00404b97b475282c83b3d497edf4"
+    },
+    {
+      "path": "environment-freeze.txt",
+      "bytes": 700,
+      "sha256": "297f28c607596b07d78f55c7e3a84971c621b7cded1c265c826b00e9fece5b9b"
+    },
+    {
+      "path": "business_series.csv",
+      "bytes": 5787,
+      "sha256": "d658f03ce4bf7c052a3adc3f340bba298d535fd907d62b401cebfa8f10dfb90d"
+    },
+    {
+      "path": "forecast_contract.yaml",
+      "bytes": 339,
+      "sha256": "4aaa1ad41a82c1ddea3a70ff3c2027a29bb92e0f25600e89ec7fa667ff2bb30d"
+    },
+    {
+      "path": "agent_tool_contract.json",
+      "bytes": 2034,
+      "sha256": "5c5117769dc60db03e6ee6e4f9da40711b47026c39bfbcc0e7cff5ac3b0e1b9f"
+    },
+    {
+      "path": "noaa_co2_snapshot.csv",
+      "bytes": 38776,
+      "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675"
+    },
+    {
+      "path": "rolling_backtest.csv",
+      "bytes": 6859,
+      "sha256": "e2c8d9f7ce289f4df90e8049eab1df02b39ea9feb2c5217cb5ced813ffbc059a"
+    },
+    {
+      "path": "holdout_forecast.csv",
+      "bytes": 939,
+      "sha256": "d6f9a43e209352a5bd21bb163a187705436c1b3fa1eb57a110e91f92d6addeba"
+    },
+    {
+      "path": "future_forecast.csv",
+      "bytes": 624,
+      "sha256": "28b134dcaf3feb27cace7ef5380938efebd54b155653c82d30a197c687b0d819"
+    },
+    {
+      "path": "SOURCE_LEDGER.md",
+      "bytes": 2867,
+      "sha256": "10829cee90282771f5c1702b5f9c6f4c805fea65cc7440d9c035fb8e2f0db60d"
+    },
+    {
+      "path": "sample-output/DECISION-MEMO.md",
+      "bytes": 1304,
+      "sha256": "75a1e830def55204c7a3a4f609a312dc7ed190849d9e173c701286c059fdd60b"
+    },
+    {
+      "path": "sample-output/data_quality_report.json",
+      "bytes": 353,
+      "sha256": "e031d1e1b8d31e2ca911826558c411645b40fce3f47e06cda6b19bdb0eb4470a"
+    },
+    {
+      "path": "sample-output/future_forecast.csv",
+      "bytes": 742,
+      "sha256": "ff9b5c2a4b5a1a433cad065618103f8044faf8410521f819764e83a435726120"
+    },
+    {
+      "path": "sample-output/future_forecast.png",
+      "bytes": 153739,
+      "sha256": "4ae4c1674de53db32ec618340a215b60359516badd13f0f8b4fc9068e73199f9"
+    },
+    {
+      "path": "sample-output/holdout_comparison.csv",
+      "bytes": 926,
+      "sha256": "1ffb9b5021fb2dc101be477b372c90b15c61753584e7f40d16ad7957f32a71d5"
+    },
+    {
+      "path": "sample-output/holdout_comparison.png",
+      "bytes": 168624,
+      "sha256": "e312211748b72c0e14ad2b79dca8e799b61ce54f99b741e8c1b0b4fc1140de46"
+    },
+    {
+      "path": "sample-output/quality_and_metrics.json",
+      "bytes": 1237,
+      "sha256": "2cceb73537a345bdbafceff2090c804beda300906c3768e16c3324eb6b27e43d"
+    },
+    {
+      "path": "sample-output/rolling_backtest.csv",
+      "bytes": 6492,
+      "sha256": "cbf2a4683d4cd6f1836c468e081cde24a7aa1183ab365c06a0530f68aee1ac9e"
+    },
+    {
+      "path": "sample-output/run_manifest.json",
+      "bytes": 721,
+      "sha256": "745cddf91f78fcf81cb776cf2bddeff60f7f5049af81970f800610d5f7c89679"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "quality": {
+    "ok": true,
+    "series_id": "store_17__sku_42",
+    "rows": 180,
+    "start": "2026-01-01T00:00:00",
+    "end": "2026-06-29T00:00:00",
+    "inferred_frequency": "D",
+    "date_column": "timestamp",
+    "target_column": "target",
+    "duplicate_dates": 0,
+    "missing_target_values": 0,
+    "numeric_target": true,
+    "minimum_cycles_check": "pass",
+    "warnings": []
+  },
+  "design": {
+    "horizon": 14,
+    "season_length": 7,
+    "folds": 5,
+    "purpose": "inventory_planning"
+  },
+  "holdout": {
+    "timesfm": {
+      "mae": 3.5616438729422435,
+      "wape_pct": 2.705535226326175
+    },
+    "baseline": {
+      "mae": 3.0714285714285716,
+      "wape_pct": 2.333152468800868
+    },
+    "q10_q90": {
+      "nominal_coverage": 0.8,
+      "empirical_coverage": 0.7857142857142857,
+      "mean_width": 10.594482421875
+    }
+  },
+  "rolling": {
+    "timesfm": {
+      "mae": 3.130489022391183,
+      "wape_pct": 2.433202660086418
+    },
+    "baseline": {
+      "mae": 3.3714285714285714,
+      "wape_pct": 2.620475238729736
+    },
+    "q10_q90": {
+      "nominal_coverage": 0.8,
+      "empirical_coverage": 0.8857142857142857,
+      "mean_width": 11.010147094726562
+    }
+  },
+  "decision_support_only": true
+}

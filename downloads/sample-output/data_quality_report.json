@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "series_id": "store_17__sku_42",
+  "rows": 180,
+  "start": "2026-01-01T00:00:00",
+  "end": "2026-06-29T00:00:00",
+  "inferred_frequency": "D",
+  "date_column": "timestamp",
+  "target_column": "target",
+  "duplicate_dates": 0,
+  "missing_target_values": 0,
+  "numeric_target": true,
+  "minimum_cycles_check": "pass",
+  "warnings": []
+}

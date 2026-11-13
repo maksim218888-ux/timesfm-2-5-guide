@@ -1,21 +1,71 @@
 {
-  "request": {
-    "series_id": "store_17__sku_42",
-    "as_of": "2026-11-12T00:00:00Z",
-    "horizon": 28,
-    "purpose": "inventory_planning"
+  "schema": "ai_first_club.forecast_agent_tool.v2",
+  "purpose": "Create decision support from one regular numeric time series",
+  "inputs": {
+    "required_files": ["forecast_contract.yaml", "business CSV"],
+    "csv_required_fields": ["timestamp", "target"],
+    "csv_optional_fields": ["series_id"],
+    "owner_answers_required": [
+      "business_decision",
+      "target_meaning",
+      "measurement_frequency",
+      "forecast_horizon",
+      "repeating_cycle",
+      "cost_of_overforecast",
+      "cost_of_underforecast",
+      "known_breaks_or_events"
+    ]
   },
-  "response": {
-    "point": [],
-    "quantiles": {
-      "p10": [],
-      "p50": [],
-      "p90": []
-    },
-    "model_version": "timesfm-2.5-pinned",
-    "license_route": "apache-2.0-self-hosted",
-    "backtest_status": "pass",
-    "warnings": [],
-    "actionable": false
+  "agent_steps": [
+    "inspect_environment",
+    "ask_business_questionnaire",
+    "validate_csv_without_silent_repairs",
+    "create_isolated_environment",
+    "install_pinned_dependencies",
+    "run_sample_workflow",
+    "run_owner_csv_workflow",
+    "compare_timesfm_with_seasonal_naive_on_same_dates",
+    "verify_expected_outputs",
+    "write_plain_russian_decision_memo"
+  ],
+  "outputs": [
+    "data_quality_report.json",
+    "holdout_comparison.csv",
+    "rolling_backtest.csv",
+    "quality_and_metrics.json",
+    "future_forecast.csv",
+    "holdout_comparison.png",
+    "future_forecast.png",
+    "DECISION-MEMO.md",
+    "run_manifest.json"
+  ],
+  "safety": {
+    "decision_support_only": true,
+    "actionable": false,
+    "owner_confirmation_required": true,
+    "forbidden_without_explicit_confirmation": [
+      "place_order",
+      "change_inventory",
+      "change_staffing",
+      "change_shifts",
+      "change_ad_budget",
+      "change_prices",
+      "transfer_money",
+      "send_external_message"
+    ],
+    "fail_closed_on": [
+      "invalid_or_irregular_data",
+      "insufficient_history",
+      "license_route_mismatch",
+      "missing_baseline_comparison",
+      "missing_expected_output",
+      "non_finite_forecast"
+    ]
+  },
+  "model": {
+    "engine": "TimesFM 2.5",
+    "model_id": "google/timesfm-2.5-200m-pytorch",
+    "revision": "1d952420fba87f3c6dee4f240de0f1a0fbc790e3",
+    "license_route": "apache-2.0-self-hosted"
   }
 }

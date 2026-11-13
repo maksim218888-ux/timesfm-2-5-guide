@@ -1,0 +1,22 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux-5.15.0-198-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cpu",
+  "timesfm_package": "3.0.2",
+  "model_id": "google/timesfm-2.5-200m-pytorch",
+  "model_revision": "1d952420fba87f3c6dee4f240de0f1a0fbc790e3",
+  "input_csv": "final/site/downloads/business_series.csv",
+  "input_sha256": "8998f28a3275d04e507f843ab636fbfa8948322ae730d2f513c887037302bfba",
+  "elapsed_seconds": 157.558,
+  "outputs": [
+    "DECISION-MEMO.md",
+    "data_quality_report.json",
+    "future_forecast.csv",
+    "future_forecast.png",
+    "holdout_comparison.csv",
+    "holdout_comparison.png",
+    "quality_and_metrics.json",
+    "rolling_backtest.csv"
+  ],
+  "no_business_action_performed": true
+}
