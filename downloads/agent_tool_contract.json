@@ -1,0 +1,21 @@
+{
+  "request": {
+    "series_id": "store_17__sku_42",
+    "as_of": "2026-11-12T00:00:00Z",
+    "horizon": 28,
+    "purpose": "inventory_planning"
+  },
+  "response": {
+    "point": [],
+    "quantiles": {
+      "p10": [],
+      "p50": [],
+      "p90": []
+    },
+    "model_version": "timesfm-2.5-pinned",
+    "license_route": "apache-2.0-self-hosted",
+    "backtest_status": "pass",
+    "warnings": [],
+    "actionable": false
+  }
+}

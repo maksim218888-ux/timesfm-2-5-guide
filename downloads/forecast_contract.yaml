@@ -1,0 +1,8 @@
+target: units_sold
+frequency: 1d
+series_id: store_17__sku_42
+as_of: 2026-11-12T00:00:00Z
+horizon: 28
+business_decision: inventory_planning
+baseline: seasonal_naive_7d
+allowed_action: recommendation_only

@@ -1,0 +1,6 @@
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const progress=$('#progress'), sticky=$('#sticky-action');
+function updateProgress(){const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;progress.style.width=`${max?Math.min(100,scrollY/max*100):0}%`;sticky.classList.toggle('visible',scrollY>1100);const sections=$$('section[id]');let current=sections[0]?.id;for(const s of sections){if(s.getBoundingClientRect().top<150)current=s.id;}$$('.progress-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${current}`));}
+addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
+$$('.copy').forEach(btn=>btn.addEventListener('click',async()=>{const pre=btn.parentElement.querySelector('code');try{await navigator.clipboard.writeText(pre.innerText);btn.textContent='Скопировано';btn.classList.add('done');setTimeout(()=>{btn.textContent='Копировать';btn.classList.remove('done')},1600)}catch{btn.textContent='Выделите код'}}));
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){const el=$(a.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});history.replaceState(null,'',a.getAttribute('href'));}}});
